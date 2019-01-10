@@ -1,0 +1,15 @@
+'.source.hclrs':
+  Register:
+    prefix: 'reg'
+    body: '''
+      register ${1:fF} {
+        $2
+      }$0
+    '''
+  Mux:
+    prefix: 'mux'
+    body: '''
+      $1 = [
+        $2
+      ];$0
+    '''

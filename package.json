@@ -1,0 +1,20 @@
+{
+  "name": "language-hclrs",
+  "version": "0.0.0",
+  "description": "HCLRS language support for Atom",
+  "keywords": [
+    "language",
+    "grammar",
+    "tree-sitter",
+    "hclrs",
+    "cs3330"
+  ],
+  "repository": "https://github.com/atom/language-hclrs",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.32.0 <2.0.0"
+  },
+  "dependencies": {
+    "tree-sitter-hclrs": "^0.0.2"
+  }
+}

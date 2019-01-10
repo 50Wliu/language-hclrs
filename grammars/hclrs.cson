@@ -1,0 +1,82 @@
+scopeName: 'source.hclrs'
+name: 'HCLRS'
+type: 'tree-sitter'
+parser: 'tree-sitter-hclrs'
+fileTypes: [
+  'hcl'
+]
+
+folds: [
+  {
+    type: 'comment'
+  }
+  {
+    type: 'register_declaration'
+    start: {type: '"{"'}
+    end: {index: -1}
+  }
+  {
+    type: 'mux_expression'
+    start: {index: 0}
+    end: {index: -1}
+  }
+  {
+    start: {type: '('}
+    end: {type: ')', index: -1}
+  }
+]
+
+comments:
+  start: '/*'
+  end: '*/'
+
+scopes:
+  'number': 'constant.numeric'
+  'comment': 'comment.block'
+
+  '"wire"': 'storage.type'
+  '"const"': 'storage.modifier'
+  '"register"': 'storage.type'
+  'register_name': 'entity.name'
+
+  'identifier': [
+    {
+      'match': '^[A-Z_]+$'
+      'scopes': 'constant.other'
+    }
+  ]
+
+  'predefined_constant': 'constant.reserved'
+
+  'true': 'constant.language.boolean.true'
+  'false': 'constant.language.boolean.false'
+
+  '"="': 'keyword.operator'
+  '"!"': 'keyword.operator'
+  '"+"': 'keyword.operator'
+  '"-"': 'keyword.operator'
+  '"*"': 'keyword.operator'
+  '"/"': 'keyword.operator'
+  '"=="': 'keyword.operator'
+  '"!="': 'keyword.operator'
+  '">="': 'keyword.operator'
+  '"<="': 'keyword.operator'
+  '">"': 'keyword.operator'
+  '"<"': 'keyword.operator'
+  '"&&"': 'keyword.operator'
+  '"||"': 'keyword.operator'
+  '"&"': 'keyword.operator'
+  '"~"': 'keyword.operator'
+  '"^"': 'keyword.operator'
+  '">>"': 'keyword.operator'
+  '">>>"': 'keyword.operator'
+  '"<<"': 'keyword.operator'
+  '"|"': 'keyword.operator'
+
+  '"in"': 'keyword.operator.in'
+
+  '".."': 'keyword.operator.slice'
+
+  '";"': 'punctuation.terminator.statement'
+  '":"': 'punctuation.separator.assignment'
+  '","': 'punctuation.separator.delimiter'
