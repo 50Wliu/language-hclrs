@@ -10,6 +10,7 @@
     "cs3330"
   ],
   "repository": "https://github.com/50Wliu/language-hclrs",
+  "author": "Winston Liu",
   "license": "MIT",
   "engines": {
     "atom": ">=1.32.0 <2.0.0"
