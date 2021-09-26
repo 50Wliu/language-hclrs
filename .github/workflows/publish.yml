@@ -25,7 +25,7 @@ jobs:
       run: |
         $user = Invoke-RestMethod -Method Get -Uri https://api.github.com/users/${{ github.actor }}
         git config user.name $user.name
-        git config user.email ($user.email ?? "$($user.id)+${{ github.actor }}@noreply.users.github.com")
+        git config user.email ($user.email ?? "$($user.id)+${{ github.actor }}@users.noreply.github.com")
 
     - name: Publish new version
       run: apm publish ${{ github.event.inputs.version }}
