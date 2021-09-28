@@ -1,6 +1,6 @@
 {
   "name": "language-hclrs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "HCLRS language support for Atom",
   "keywords": [
     "language",
