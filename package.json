@@ -16,6 +16,6 @@
     "atom": ">=1.32.0 <2.0.0"
   },
   "dependencies": {
-    "tree-sitter-hclrs": "^0.0.5"
+    "tree-sitter-hclrs": "^0.0.6"
   }
 }
